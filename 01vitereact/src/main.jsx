@@ -6,6 +6,7 @@ import Journey from './journey.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <>
+    <App />
     <Journey />
     </>
   </React.StrictMode>,
