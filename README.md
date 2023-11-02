@@ -4,3 +4,4 @@
 * `export default FunctionName`  exports the Journey component as the default export of this module. It allows you to import and use the `FunctonName` component in other parts of your application as the default export.
 * `function FunctonName() { ... }`: This code defines the FunctonName component as a functional component. It's a basic React component that returns JSX (JavaScript XML), which represents the UI for your component.
 * The `rootElement` in a React application can be visualized as the entry point or container in your HTML document where your entire React application will be rendered. It's like the soil in which you plant your React tree, allowing it to grow and expand throughout your web page.
+* , the `<> and </>` are shorthand for <React.Fragment> and </React.Fragment>, respectively. They create a virtual wrapper that doesn't produce any extra DOM elements in the final output.
