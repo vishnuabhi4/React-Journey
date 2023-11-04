@@ -1,21 +1,28 @@
-function customRender(reactElement, container){
-    const domElement = document.createElementlement
+function customRender(reactElement, container) {
+    // domElement.setAttribute('href', reactElement.props.href);
+    // domElement.setAttribute('target',reactElement.props.target);
+    // container.appendChild(domElement)
     
-    (reactElement.type)
-    domElement.innerHtml = reactElement.children
-    domElement.setAttribute('href', reactElement.props.href)
-    
-}
+    const domElement = document.createElement(reactElement.type)
+    domElement.innerHTML= reactElement.children
+    for (const prop in reactElement.props) {
+      if(prop === 'children') continue;
+      domElement.setAttribute(prop, reactElement.props[prop])
+    }
+    container.appendChild(domElement);
+  }
 
-const reactElement = {
+  
+  const reactElement = {
     type: 'a',
     props: {
-        href: 'https://google.com',
-        target: '_blank'
+      href: 'https://google.com',
+      target: '_blank',
     },
-    children: 'click me to visit google'
-}
-
-const mainContainer = document.querySelector('#root')
-
-customRender(reactElement, mainContainer)
+    children: 'Click me to visit Google',
+  };
+  
+  const mainContainer = document.querySelector('#root');
+  
+  customRender(reactElement, mainContainer);
+  
