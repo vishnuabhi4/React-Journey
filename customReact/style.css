@@ -1,0 +1,11 @@
+body{
+    background-color: darkslategray;
+}
+#root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.395);
+}
+#root a {
+   display: grid;
+   
+}
