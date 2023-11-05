@@ -1,9 +1,17 @@
 body{
-    background-color: darkslategray;
+    background-color: rgba(0, 132, 24, 0.559)
 }
 #root{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgba(0, 0, 0, 0.395);
     text-align: center;
    text-decoration: none;
+   position: absolute;
+   top: 50%;
+   left: 45%;
+}
+#root a {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 300;
+    font-weight: bold;
 }
