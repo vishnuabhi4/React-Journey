@@ -4,8 +4,6 @@ body{
 #root{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgba(0, 0, 0, 0.395);
-}
-#root a {
-   display: grid;
-   
+    text-align: center;
+   text-decoration: none;
 }
