@@ -5,11 +5,12 @@ function customRender(reactElement, container) {
     
     const domElement = document.createElement(reactElement.type)
     domElement.innerHTML= reactElement.children
-    for (const prop in reactElement.props) {
-      if(prop === 'children') continue;
-      domElement.setAttribute(prop, reactElement.props[prop])
+    for (const i in reactElement.props) {
+      if(i === 'children') continue;
+      domElement.setAttribute(i, reactElement.props[i])
     }
     container.appendChild(domElement);
+    //The container is represented by the mainContainer variable.
   }
 
   
