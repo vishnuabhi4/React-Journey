@@ -11,9 +11,14 @@ function customRender(reactElement, container) {
     createElement(tagName, options)
     */
     domElement.innerHTML= reactElement.children
+    // it will return like this = <a href="https://google.com" target="_blank">Click me to visit Google(it is the child of a tag)</a>
     for (const i in reactElement.props) {
-      if(i === 'children') continue;
+      console.log(i);
+      // if(i === 'children') continue;
+      //By excluding children from the attributes, you ensure that it is treated as the inner content 
+      //of the element rather than an HTML attribute.
       domElement.setAttribute(i, reactElement.props[i])
+      // domElement.setAttribute(name, value)
     }
     container.appendChild(domElement);
     //The container is represented by the mainContainer variable.
