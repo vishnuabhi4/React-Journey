@@ -4,7 +4,12 @@ function customRender(reactElement, container) {
     // container.appendChild(domElement)
     
     const domElement = document.createElement(reactElement.type)
-    //The reactElement.type is expected to be a string representing the HTML tag name, such as "div", "a", "p", etc.
+    /*The reactElement.type is expected to be a string representing the HTML tag name, such as "div", "a", "p", etc.
+    document.createElement() method creates the HTML element specified by tagName, 
+    or an HTMLUnknownElement if tagName isn't recognized.
+    createElement(tagName)
+    createElement(tagName, options)
+    */
     domElement.innerHTML= reactElement.children
     for (const i in reactElement.props) {
       if(i === 'children') continue;
