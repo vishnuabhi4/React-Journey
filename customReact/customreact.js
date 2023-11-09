@@ -21,10 +21,10 @@ function customRender(reactElement, container) {
       // domElement.setAttribute(name, value)
     }
     container.appendChild(domElement);
+    // mainContainer.appendChild(domElement);
     //The container is represented by the mainContainer variable.
   }
 
-  
   const reactElement = {
     type: 'a',
     props: {
@@ -34,7 +34,8 @@ function customRender(reactElement, container) {
     children: 'Click me to visit Google',
   };
   
+  
+
   const mainContainer = document.querySelector('#root');
   
   customRender(reactElement, mainContainer);
-  
