@@ -4,4 +4,3 @@ function Journey(){
     <h1>Journey Started</h1>)
     
 }
-

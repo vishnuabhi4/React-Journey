@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Journey from './journey.jsx'
+// import { JSX } from 'react/jsx-runtime.js'
 
 const AnotherElement = (
   <a href='https://google.com' target='_blank' >visit Google</a>
@@ -21,9 +22,7 @@ const Anotheruser = "_TO_"
 const ReactElement = React.createElement(
   'a',
   { href: 'https://google.com', target: '_blank'},
-  'click me',
-  Anotheruser,
-  AnotherElement
+  'click me'
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render
