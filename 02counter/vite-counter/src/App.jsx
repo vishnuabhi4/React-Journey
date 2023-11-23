@@ -17,7 +17,9 @@ function App() {
   }
   let removeValue = () =>{
     console.log('removed');
-    setCounter(counter - 1)
+    if(counter >= 1){
+      setCounter(counter - 1)
+    }
   }
   return (
     <>
