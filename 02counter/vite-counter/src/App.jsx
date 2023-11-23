@@ -15,6 +15,10 @@ function App() {
     // or 
     // setCounter(counter) 
   }
+  let removeValue = () =>{
+    console.log('removed');
+    setCounter(counter - 1)
+  }
   return (
     <>
      <h1>State in React</h1>
@@ -22,7 +26,7 @@ function App() {
 
     <button onClick={addValue}>Add value</button> 
     <br />
-    <button >remove value</button>
+    <button onClick={removeValue} >remove value</button>
 
     </>
   )
