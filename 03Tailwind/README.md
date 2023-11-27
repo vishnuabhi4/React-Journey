@@ -1,8 +1,7 @@
-# React + Vite
+### Debugging your Tailwind project
+* Confirm that you’ve installed Autoprefixer and postCSS alongside Tailwind.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Installing Tailwindcss without these two will ultimately prevent your utility classes from being recognised. Autoprefixer is a plugin that generates vendor prefixes and injects them into your CSS properties so you don’t have to do it manually. PostCSS, on the other hand, handles CSS transformations, adds vendor prefixes using the Autoprefixer plugin, ensures cross-browser compatibility etc. Both of them used together in your project significantly reduces your development time. Here’s how to add it to your project if you skipped it.
 
-Currently, two official plugins are available:
+Install alongside tailwind `npm install -D tailwindcss postcss autoprefixer`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
