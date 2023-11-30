@@ -151,8 +151,8 @@ function App() {
         </div>
       </div>
       
-      <Card />
-      <Card /> 
+      <Card username="user1" />
+      <Card username="user2"/> 
 
     </>
   );
