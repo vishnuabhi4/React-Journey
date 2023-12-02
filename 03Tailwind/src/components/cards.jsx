@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({username}) {
+function Card({username, btnText}) {
   console.log(username);
   return (
     <div className="flex justify-center">
@@ -18,7 +18,7 @@ function Card({username}) {
             debitis?
           </p>
           <button class="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-            View Profile →
+            {btnText}
           </button>
         </div>
       </div>

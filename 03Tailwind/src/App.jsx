@@ -151,8 +151,8 @@ function App() {
         </div>
       </div>
       
-      <Card username="user1" />
-      <Card username="user2"/> 
+      <Card username="user1" btnText="click one" />
+      <Card username="user2" btnText="click two" /> 
 
     </>
   );

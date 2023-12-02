@@ -12,6 +12,17 @@ function App() {
     console.log('value added', counter)
     // counter = counter + 1;
     setCounter(counter + 1) 
+    setCounter(counter + 1) 
+    setCounter(counter + 1) 
+    setCounter(counter + 1) 
+    setCounter(counter + 1) 
+    setCounter(counter + 1) 
+    setCounter(counter + 1) 
+    /*
+     calling multiple state update functions (e.g., multiple 
+      setCounter calls) within the same synchronous block of code 
+     will not cause the state updates to happen multiple times.
+    */
     // or 
     // setCounter(counter) 
   }
