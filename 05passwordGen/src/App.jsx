@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 
-const [length, setLength] = useState(8)
-const [numberAllowed, setNumberAllowed] = useState(false)
-const [characterAllowed, setCharactersAllowed] = useState(false)
-cosst [password, setPassword] = useState(" ")
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [length, setLength] = useState(8)
+  const [numberAllowed, setNumberAllowed] = useState(false)
+  const [characterAllowed, setCharactersAllowed] = useState(false)
+  cosst [password, setPassword] = useState("")
+  
 
   return (
     <>
