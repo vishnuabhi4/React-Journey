@@ -9,6 +9,22 @@ function App() {
   cosst [password, setPassword] = useState("")
   
 
+  const passwordRef = useRef(null)
+
+  const passwordGenerator = useCallback(() => {
+    let pass = ""
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    if (numberAllowed) str += "0123456789"
+    if (charAllowed) str += "!@#$%^&*-_+=[]{}~`"
+
+    for (let i = 1; i <= length; i++) {
+      let char = Math.floor(Math.random() * str.length + 1)
+      pass += str.charAt(char)
+      
+    }
+
+    setPassword(pass)
+
   return (
     <>
       <div className='w-full max-w-md mx-auto shadow-md 
