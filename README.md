@@ -23,3 +23,14 @@ Actually re-rendering the entire app on each change only works for the most triv
 Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM." A high-level description goes something like this: when you render a React application, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment — for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
 ## What is the difference between state and props?
 * props (short for “properties”) and state are both plain JavaScript objects. While both hold information that influences the output of render, they are different in one important way: props get passed to the component (similar to function parameters) whereas state is managed within the component (similar to variables declared within a function).
+
+#### Class components and Function components
+* Class Components:
+Class components are traditional React components defined using ES6 classes. They extend from the base React.Component class and can have state, lifecycle methods, and more complex functionalities.
+```
+class MyClassComponent extends Component {
+    //code...
+}
+```
+* Function components
+Function components are simpler and more lightweight components defined as JavaScript functions. They don't have their own state or lifecycle methods (until the introduction of hooks). They typically receive props and return the JSX to render.
