@@ -24,6 +24,19 @@ Reconciliation is the algorithm behind what is popularly understood as the "virt
 ## What is the difference between state and props?
 * props (short for “properties”) and state are both plain JavaScript objects. While both hold information that influences the output of render, they are different in one important way: props get passed to the component (similar to function parameters) whereas state is managed within the component (similar to variables declared within a function).
 
+## Hooks
+* 
+Certainly! The useCallback hook in React is used to memoize a function, returning a memoized version of that function. Here's the syntax:
+```
+const memoizedCallback = useCallback(
+  () => {
+    // Function logic here
+  },
+  [dependencies]
+);
+
+```
+
 #### Class components and Function components
 * Class Components:
 Class components are traditional React components defined using ES6 classes. They extend from the base React.Component class and can have state, lifecycle methods, and more complex functionalities.
