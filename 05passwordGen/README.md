@@ -27,4 +27,8 @@ const memoizedFunction = useCallback(
 
 * `const passwordRef = useRef(null);` useRef: This is a React Hook used to create a mutable reference that persists across renders without causing a re-render when the reference changes. It returns a ref object.
 
-* 
+# Syntax Referrance 
+* `const passwordGenerator = useCallback(() => { ... }, [dependencies]);` :
+What is useCallback?
+A React hook that memoizes a callback function, meaning it remembers the previously returned result and only re-creates the function if its dependencies change.
+Optimizes performance by preventing unnecessary re-renders of child components that rely on the memoized function.
