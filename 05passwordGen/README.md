@@ -42,3 +42,27 @@ Optimizes performance by preventing unnecessary re-renders of child components t
 After assigning passwordRef to a DOM element using the ref attribute in JSX, you can access and manipulate that DOM element using the passwordRef.current property.
 It's often used to access input values, focus on elements, or store references to DOM elements within functional components.
 For instance, if passwordRef was assigned to an input element, you could access its current value via passwordRef.current.value.
+#### ref
+* After assigning passwordRef to a DOM element using the ref attribute in JSX, you can access and manipulate that DOM element using the passwordRef.current property.
+* For instance, if passwordRef was assigned to an input element, you could access its current value via passwordRef.current.value.
+```
+import React, { useRef } from 'react';
+
+function MyComponent() {
+  const passwordRef = useRef(null);
+
+  const handleSubmit = () => {
+    // Accessing the input value using passwordRef.current.value
+    const passwordValue = passwordRef.current.value;
+    console.log('Password:', passwordValue);
+  };
+
+  return (
+    <div>
+      <input type="password" ref={passwordRef} />
+      <button onClick={handleSubmit}>Submit</button>
+    </div>
+  );
+}
+
+```
