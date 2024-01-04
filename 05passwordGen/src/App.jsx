@@ -33,11 +33,18 @@ function App() {
   }, [length, numberAllowed, charAllowed, setPassword]);
   
 
-  const copyPasswordToClipboard = useCallback(() => {
-    passwordRef.current?.select();
-    passwordRef.current?.setSelectionRange(0, 999);
-    window.navigator.clipboard.writeText(password);
-  }, [password]);
+ // Defining a function named copyPasswordToClipboard using useCallback
+const copyPasswordToClipboard = useCallback(() => {
+  // Selects the content in the passwordRef element if it exists
+  passwordRef.current?.select();
+
+  // Sets the selection range from index 0 to 999 in passwordRef element if it exists
+  passwordRef.current?.setSelectionRange(0, 999);
+
+  // Writes the password value to the system clipboard using the Clipboard API
+  window.navigator.clipboard.writeText(password);
+}, [password]); // Depends on the 'password' variable
+
 
   useEffect(() => {
     passwordGenerator();
