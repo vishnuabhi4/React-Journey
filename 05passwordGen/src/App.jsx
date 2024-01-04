@@ -8,20 +8,30 @@ function App() {
 
   //useRef hook
   const passwordRef = useRef(null);
-
+  
   const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  
+    // Checking if numbers are allowed, then adding them to the string
     if (numberAllowed) str += "0123456789";
+  
+    // Checking if special characters are allowed, then adding them to the string
     if (charAllowed) str += "!@#$%^&*-_+=[]{}~`";
-
+  
+    // Generating the password of the specified length
     for (let i = 1; i <= length; i++) {
+      // Generating a random character index within the string length
       let char = Math.floor(Math.random() * str.length + 1);
+  
+      // Adding the randomly chosen character to the password string
       pass += str.charAt(char);
     }
-
+  
+    // Setting the generated password using the 'setPassword' function
     setPassword(pass);
   }, [length, numberAllowed, charAllowed, setPassword]);
+  
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
