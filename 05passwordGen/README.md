@@ -66,3 +66,13 @@ function MyComponent() {
 }
 
 ```
+# Dependencies
+* To optimize performance and prevent unnecessary re-runs of the password generator function.
+* To ensure the generated password always reflects the latest values of these variables.
+* `Think of it like this:` The password generator is a chef who needs certain ingredients (dependencies) to create a password dish.
+If any of the ingredients change, the chef needs to be notified to make a new dish that incorporates the new flavors.
+* Without these dependencies:
+The chef might make the same password over and over, even if preferences or length have changed, leading to stale or incorrect passwords.
+The React kitchen might waste time and resources by re-running the password generator even when nothing essential has changed.
+
+
