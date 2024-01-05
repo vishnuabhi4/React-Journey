@@ -27,12 +27,6 @@ const memoizedFunction = useCallback(
 
 * `const passwordRef = useRef(null);` useRef: This is a React Hook used to create a mutable reference that persists across renders without causing a re-render when the reference changes. It returns a ref object.
 
-# Syntax Referrance 
-* `const passwordGenerator = useCallback(() => { ... }, [dependencies]);` :
-What is useCallback?
-* A React hook that memoizes a callback function, meaning it remembers the previously returned result and only re-creates the function if its dependencies change.
-Optimizes performance by preventing unnecessary re-renders of child components that rely on the memoized function.
-
 * `const passwordRef = useRef(null);`
 * useRef is a React hook that creates a mutable object referred to as a "ref."
 * It's commonly used to access and interact with DOM elements or to persist values across component renders without causing a re-render.
@@ -42,7 +36,7 @@ Optimizes performance by preventing unnecessary re-renders of child components t
 After assigning passwordRef to a DOM element using the ref attribute in JSX, you can access and manipulate that DOM element using the passwordRef.current property.
 It's often used to access input values, focus on elements, or store references to DOM elements within functional components.
 For instance, if passwordRef was assigned to an input element, you could access its current value via passwordRef.current.value.
-#### ref
+### ref
 * After assigning passwordRef to a DOM element using the ref attribute in JSX, you can access and manipulate that DOM element using the passwordRef.current property.
 * For instance, if passwordRef was assigned to an input element, you could access its current value via passwordRef.current.value.
 ```
@@ -66,6 +60,14 @@ function MyComponent() {
 }
 
 ```
+
+# Syntax Referrance 
+* `const passwordGenerator = useCallback(() => { ... }, [dependencies]);` :
+What is useCallback?
+* A React hook that memoizes a callback function, meaning it remembers the previously returned result and only re-creates the function if its dependencies change.
+Optimizes performance by preventing unnecessary re-renders of child components that rely on the memoized function.
+
+
 # Dependencies
 * To optimize performance and prevent unnecessary re-runs of the password generator function.
 * To ensure the generated password always reflects the latest values of these variables.
