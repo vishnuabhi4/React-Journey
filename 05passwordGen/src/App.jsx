@@ -12,38 +12,25 @@ function App() {
   const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    if (numberAllowed) str += "0123456789";                       // Checking if numbers are allowed, then adding them to the string
+    if (charAllowed) str += "!@#$%^&*-_+=[]{}~`";                 // Checking if special characters are allowed, then adding them to the string
   
-    // Checking if numbers are allowed, then adding them to the string
-    if (numberAllowed) str += "0123456789";
-  
-    // Checking if special characters are allowed, then adding them to the string
-    if (charAllowed) str += "!@#$%^&*-_+=[]{}~`";
-  
-    // Generating the password of the specified length
-    for (let i = 1; i <= length; i++) {
-      // Generating a random character index within the string length
-      let char = Math.floor(Math.random() * str.length + 1);
-  
-      // Adding the randomly chosen character to the password string
-      pass += str.charAt(char);
+    for (let i = 1; i <= length; i++) {                           // Generating the password of the specified length
+      let char = Math.floor(Math.random() * str.length + 1);      // Generating a random character index within the string length
+       pass += str.charAt(char);                                  // Adding the randomly chosen character to the password string
     }
-  
-    // Setting the generated password using the 'setPassword' function
-    setPassword(pass);
+    setPassword(pass);                                            // Setting the generated password using the 'setPassword' function
   }, [length, numberAllowed, charAllowed, setPassword]);
+
   
-
- // Defining a function named copyPasswordToClipboard using useCallback
-const copyPasswordToClipboard = useCallback(() => {
-  // Selects the content in the passwordRef element if it exists
-  passwordRef.current?.select();
-
-  // Sets the selection range from index 0 to 999 in passwordRef element if it exists
-  passwordRef.current?.setSelectionRange(0, 999);
-
-  // Writes the password value to the system clipboard using the Clipboard API
-  window.navigator.clipboard.writeText(password);
-}, [password]); // Depends on the 'password' variable
+const copyPasswordToClipboard = useCallback(() => {               // Defining a function named copyPasswordToClipboard using useCallback
+  
+  passwordRef.current?.select();                                  // Selects the content in the passwordRef element if it exists
+  
+  passwordRef.current?.setSelectionRange(0, 999);                 // Sets the selection range from index 0 to 999 in passwordRef element if it exists  
+  
+  window.navigator.clipboard.writeText(password);                 // Writes the password value to the system clipboard using the Clipboard API
+}, [password]);                                                   // Depends on the 'password' variable
 
 
   useEffect(() => {
